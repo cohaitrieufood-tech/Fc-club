@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FC Hub | So Sánh Cầu Thủ (Compare)</title>
+    <!-- Liên kết file CSS chuẩn -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Thanh điều hướng dùng chung cho toàn bộ website -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">FC HUB.</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="market.html">Thị Trường</a></li>
+                <li><a href="shortlist.html">Theo Dõi</a></li>
+                <li><a href="compare.html" class="active">So Sánh</a></li>
+                <li><a href="news.html">Tin Tức</a></li>
+                <li><a href="contact.html">Liên Hệ</a></li>
+                <li><a href="about.html">Giới Thiệu</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Nội dung chính của trang So Sánh -->
+    <main class="container">
+        <h1 class="page-title">SO SÁNH CẦU THỦ</h1>
+        <p class="page-desc">Đặt hai ngôi sao lên bàn cân để phân tích chi tiết các chỉ số chuyên môn trước khi đưa ra quyết định chuyển nhượng.</p>
+        
+        <!-- Khung chọn cầu thủ và bảng so sánh -->
+        <div class="compare-container">
+            <div class="compare-selectors">
+                <select id="player1-select" class="player-select">
+                    <option value="">-- Chọn cầu thủ thứ nhất --</option>
+                </select>
+                <select id="player2-select" class="player-select">
+                    <option value="">-- Chọn cầu thủ thứ hai --</option>
+                </select>
+            </div>
+
+            <!-- Bảng hiển thị kết quả so sánh (được app.js điều khiển) -->
+            <div id="compare-result" class="compare-table-wrapper">
+                <p class="placeholder-text">Vui lòng chọn hai cầu thủ ở trên để bắt đầu so sánh.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Khung thông báo Toast -->
+    <div id="toast">Thông báo</div>
+
+    <!-- Liên kết bộ não xử lý JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>

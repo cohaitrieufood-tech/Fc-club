@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FC Hub | Thị Trường Chuyển Nhượng</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">FC HUB.</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="market.html" class="active">Thị Trường</a></li>
+                <li><a href="shortlist.html">Theo Dõi</a></li>
+                <li><a href="compare.html">So Sánh</a></li>
+                <li><a href="news.html">Tin Tức</a></li>
+                <li><a href="contact.html">Liên Hệ</a></li>
+                <li><a href="about.html">Giới Thiệu</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="page-title">THỊ TRƯỜNG CHUYỂN NHƯỢNG</h1>
+        <p class="page-desc">Hệ thống scout dữ liệu cầu thủ Real-time với các chỉ số chuyên môn cao cấp.</p>
+        
+        <!-- Thanh tìm kiếm & bộ lọc như trong yêu cầu của bạn -->
+        <div class="filter-bar">
+            <input type="text" id="search-input" class="filter-input" placeholder="Nhập tên cầu thủ...">
+            <select id="pos-select" class="filter-select">
+                <option value="">Mọi Vị Trí</option>
+                <option value="ST">ST</option>
+                <option value="CM">CM</option>
+                <option value="CB">CB</option>
+                <option value="GK">GK</option>
+                <option value="LW">LW</option>
+            </select>
+            <select id="sort-select" class="filter-select">
+                <option value="desc">Chỉ số: Cao đến thấp</option>
+                <option value="asc">Chỉ số: Thấp đến cao</option>
+            </select>
+        </div>
+
+        <!-- Khung hiển thị danh sách cầu thủ -->
+        <div id="market-grid" class="grid-system"></div>
+    </main>
+
+    <!-- Modal Xem Chi Tiết -->
+    <div id="playerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <div id="toast">Thông báo</div>
+
+    <script src="app.js"></script>
+</body>
+</html>
